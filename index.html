@@ -7,26 +7,39 @@
 <meta name="description" content="Davide Paganelli, Italian film director based in Rome. Analog photography, experimental video and independent cinema.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ===== TOP HUD ===== -->
+<!-- ===== HEADER ===== -->
 <header class="hud-top">
-  <div class="hud-center">
-    <div class="name">DAVIDE PAGANELLI</div>
-    <div class="role">DIRECTOR</div>
+  <div class="hud-left">
+    <div class="meta"><span class="label">DIRECTOR:</span> DAVIDE PAGANELLI</div>
+    <div class="meta"><span class="label">BASED:</span> ROME, ITALY</div>
   </div>
+  <nav class="hud-nav">
+    <a href="#works">VIDEO</a>
+    <a href="#magazine">MAGAZINE</a>
+    <a href="about.html">ABOUT</a>
+    <a href="https://www.instagram.com/davidepaganelly" target="_blank" rel="noopener">INSTAGRAM</a>
+  </nav>
   <div class="hud-right">
-    <span class="label">EMAIL</span>
-    <a href="mailto:dpaganelli2@gmail.com">DPAGANELLI2@GMAIL.COM</a>
+    <div class="meta"><span class="label">EMAIL:</span> <a href="mailto:dpaganelli2@gmail.com">DPAGANELLI2@GMAIL.COM</a></div>
   </div>
 </header>
 
+<!-- ===== MASTHEAD ===== -->
+<div class="masthead">
+  <div class="name">DAVIDE PAGANELLI</div>
+  <div class="role">FILM DIRECTOR — ANALOG PHOTOGRAPHY / EXPERIMENTAL VIDEO / INDEPENDENT CINEMA</div>
+</div>
+
 <!-- ===== WORKS ===== -->
 <section class="section" id="works">
-  <h2 class="section-title">[VIDEO]</h2>
+  <div class="list-head">
+    <span>NO</span><span>TITLE</span><span>TYPE</span>
+  </div>
   <div class="works">
 
     <div class="work">
@@ -36,8 +49,11 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen loading="lazy"></iframe>
       </div>
-      <span class="num">[ 01 ]</span>
-      <span class="title">MASKARA — YCON YDOL</span>
+      <div class="work-caption">
+        <span class="no">01</span>
+        <span class="title">MASKARA — YCON YDOL</span>
+        <span class="type">MUSIC VIDEO</span>
+      </div>
     </div>
 
     <div class="work">
@@ -47,8 +63,11 @@
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowfullscreen loading="lazy"></iframe>
       </div>
-      <span class="num">[ 02 ]</span>
-      <span class="title">NATA [TRAILER]</span>
+      <div class="work-caption">
+        <span class="no">02</span>
+        <span class="title">NATA [TRAILER]</span>
+        <span class="type">SHORT FILM</span>
+      </div>
     </div>
 
     <div class="work">
@@ -58,8 +77,11 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen loading="lazy"></iframe>
       </div>
-      <span class="num">[ 03 ]</span>
-      <span class="title">VERRÀ LA MORTE</span>
+      <div class="work-caption">
+        <span class="no">03</span>
+        <span class="title">VERRÀ LA MORTE</span>
+        <span class="type">VIDEO ART</span>
+      </div>
     </div>
 
   </div>
@@ -67,7 +89,9 @@
 
 <!-- ===== MAGAZINE ===== -->
 <section class="section" id="magazine">
-  <h2 class="section-title">[MAGAZINE]</h2>
+  <div class="list-head">
+    <span>NO</span><span>TITLE</span><span>TYPE</span>
+  </div>
   <div class="magazine">
 
     <!-- ROTTENLAND : pdf link -->
@@ -76,16 +100,22 @@
         <img src="assets/img/rottenland/cover.jpg" alt="RottenLand cover"
              onerror="this.replaceWith(noSignal())">
       </a>
-      <span class="num">[ 01 ]</span>
-      <span class="title">ROTTENLAND</span>
+      <div class="mag-caption">
+        <span class="no">01</span>
+        <span class="title">ROTTENLAND</span>
+        <span class="type">EDITORIAL</span>
+      </div>
       <a href="assets/pdf/rottenland.pdf" target="_blank" rel="noopener"><span class="pdf-tag">OPEN PDF ►</span></a>
     </div>
 
     <!-- CONTRIBUTOR : slideshow -->
     <div class="mag-item">
       <div class="mag-frame slideshow" data-dir="assets/img/contributor" data-prefix="contributor"></div>
-      <span class="num">[ 02 ]</span>
-      <span class="title">CONTRIBUTOR</span>
+      <div class="mag-caption">
+        <span class="no">02</span>
+        <span class="title">CONTRIBUTOR</span>
+        <span class="type">EDITORIAL</span>
+      </div>
     </div>
 
     <!-- VANGUARD : single photo -->
@@ -94,34 +124,30 @@
         <img src="assets/img/vanguard/vanguard.jpg" alt="Vanguard Magazine"
              onerror="this.replaceWith(noSignal())">
       </div>
-      <span class="num">[ 03 ]</span>
-      <span class="title">VANGUARD</span>
+      <div class="mag-caption">
+        <span class="no">03</span>
+        <span class="title">VANGUARD</span>
+        <span class="type">COVER</span>
+      </div>
     </div>
 
     <!-- SIZEFIVE : slideshow -->
     <div class="mag-item">
       <div class="mag-frame slideshow" data-dir="assets/img/sizefive" data-prefix="sizefive"></div>
-      <span class="num">[ 04 ]</span>
-      <span class="title">SIZEFIVE</span>
+      <div class="mag-caption">
+        <span class="no">04</span>
+        <span class="title">SIZEFIVE</span>
+        <span class="type">EDITORIAL</span>
+      </div>
     </div>
 
   </div>
 </section>
 
-<!-- ===== MENU ===== -->
-<nav class="menu">
-  <a href="https://www.instagram.com/davidepaganelly" target="_blank" rel="noopener">INSTAGRAM</a>
-  <a href="#works">VIDEO</a>
-  <a href="#magazine">MAGAZINE</a>
-  <a href="about.html">ABOUT</a>
-  <span class="copyright">©2026 DAVIDE PAGANELLI.</span>
-</nav>
-
-<!-- ===== BOTTOM BAR ===== -->
+<!-- ===== FOOTER ===== -->
 <footer class="hud-bottom">
   <span>©2026 DAVIDE PAGANELLI.</span>
-  <span>[ BASED IN ROME ]</span>
-  <span>FORZA ROMA</span>
+  <span>BASED IN ROME — FORZA ROMA</span>
 </footer>
 
 <script src="js/main.js"></script>
