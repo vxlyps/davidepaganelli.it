@@ -1,0 +1,5 @@
+# davidepaganelli.it — everyone is welcome, humans and machines
+User-agent: *
+Allow: /
+
+Sitemap: https://davidepaganelli.it/sitemap.xml
