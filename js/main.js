@@ -15,6 +15,30 @@ function noSignal() {
   return el;
 }
 
+// rainbow-letter <h1 class="rainbow" id="rainbow-title">, Geocities-style
+(function () {
+  var el = document.getElementById("rainbow-title");
+  if (!el) return;
+  var text = "DAVIDE PAGANELLI";
+  text.split("").forEach(function (ch) {
+    var span = document.createElement("span");
+    span.textContent = ch === " " ? " " : ch;
+    el.appendChild(span);
+  });
+})();
+
+// fake hit counter, persisted per-browser via localStorage
+(function () {
+  var el = document.getElementById("hitcount");
+  if (!el) return;
+  var BASE = 4217;
+  var count = parseInt(localStorage.getItem("dp_hits"), 10);
+  if (isNaN(count)) count = BASE;
+  count += 1;
+  localStorage.setItem("dp_hits", count);
+  el.textContent = String(count).padStart(6, "0");
+})();
+
 (function () {
   var MAX_IMAGES = 10;      // tries <prefix>-01 .. <prefix>-10
   var INTERVAL = 3000;      // ms between slides

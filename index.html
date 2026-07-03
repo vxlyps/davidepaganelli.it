@@ -3,152 +3,160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Davide Paganelli — Film Director</title>
+<title>~*~ Davide Paganelli's HOMEPAGE ~*~</title>
 <meta name="description" content="Davide Paganelli, Italian film director based in Rome. Analog photography, experimental video and independent cinema.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ===== HEADER ===== -->
-<header class="hud-top">
-  <div class="hud-left">
-    <div class="meta"><span class="label">DIRECTOR:</span> DAVIDE PAGANELLI</div>
-    <div class="meta"><span class="label">BASED:</span> ROME, ITALY</div>
+<div class="win">
+
+  <div class="titlebar">
+    <span>C:\DPAGANELLI\HOMEPAGE.EXE</span>
+    <span class="buttons"><span>_</span><span>&#9633;</span><span>X</span></span>
   </div>
-  <nav class="hud-nav">
+
+  <marquee class="marquee-row" behavior="scroll" scrollamount="4">
+    *** WELCOME TO THE OFFICIAL DAVIDE PAGANELLI HOMEPAGE *** BEST VIEWED AT 800x600 *** ANALOG FILM ★ EXPERIMENTAL VIDEO ★ INDEPENDENT CINEMA *** SIGN THE GUESTBOOK ***
+  </marquee>
+
+  <div class="construction-bar">&#9888; THIS PAGE IS ALWAYS UNDER CONSTRUCTION &#9888;</div>
+
+  <nav class="nav-buttons">
+    <a href="index.html" class="current">HOME</a>
     <a href="#works">VIDEO</a>
     <a href="#magazine">MAGAZINE</a>
     <a href="about.html">ABOUT</a>
+    <a href="guestbook.html">GUESTBOOK</a>
     <a href="https://www.instagram.com/davidepaganelly" target="_blank" rel="noopener">INSTAGRAM</a>
   </nav>
-  <div class="hud-right">
-    <div class="meta"><span class="label">EMAIL:</span> <a href="mailto:dpaganelli2@gmail.com">DPAGANELLI2@GMAIL.COM</a></div>
-  </div>
-</header>
 
-<!-- ===== MASTHEAD ===== -->
-<div class="masthead">
-  <div class="name">DAVIDE PAGANELLI</div>
-  <div class="role">FILM DIRECTOR — ANALOG PHOTOGRAPHY / EXPERIMENTAL VIDEO / INDEPENDENT CINEMA</div>
+  <div class="content">
+    <h1 class="rainbow" id="rainbow-title"></h1>
+    <div class="subtitle">// FILM DIRECTOR — ROME, ITALY //</div>
+
+    <div class="widgets-row">
+      <div class="hitcounter">YOU ARE VISITOR NUMBER <span class="digits" id="hitcount">004217</span></div>
+      <div class="webring">
+        <span class="blink">&#9733;</span> ANALOG CINEMA WEBRING <span class="blink">&#9733;</span>
+        <a href="about.html">&laquo; prev</a> | <a href="#works">next &raquo;</a>
+      </div>
+    </div>
+
+    <hr class="groove">
+
+    <h2 class="section-title" id="works">&#9654; VIDEO.DIR</h2>
+    <div class="file-grid">
+
+      <div class="file-win">
+        <div class="file-titlebar">maskara.mov</div>
+        <div class="frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/Jr6r6PKVDSw"
+                  title="MASKARA — Ycon Ydol"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="file-caption">
+          <span class="num">[01]</span>MASKARA — YCON YDOL
+          <div class="tag">music video, shot on 16mm</div>
+        </div>
+      </div>
+
+      <div class="file-win">
+        <div class="file-titlebar">nata_trailer.mov</div>
+        <div class="frame">
+          <iframe src="https://player.vimeo.com/video/1206100947"
+                  title="NATA [Trailer]"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="file-caption">
+          <span class="num">[02]</span>NATA [TRAILER]
+          <div class="tag">body horror short film</div>
+        </div>
+      </div>
+
+      <div class="file-win">
+        <div class="file-titlebar">verra_la_morte.mov</div>
+        <div class="frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/Oc6n8Mp8Mww"
+                  title="Verrà la Morte"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="file-caption">
+          <span class="num">[03]</span>VERRÀ LA MORTE
+          <div class="tag">video art, shot on Super 8</div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 class="section-title" id="magazine">&#9654; MAGAZINE.DIR</h2>
+    <div class="file-grid">
+
+      <div class="file-win">
+        <div class="file-titlebar">rottenland.pdf</div>
+        <a class="frame portrait" href="assets/pdf/rottenland.pdf" target="_blank" rel="noopener" style="display:block;">
+          <img src="assets/img/rottenland/cover.jpg" alt="RottenLand cover"
+               onerror="this.replaceWith(noSignal())">
+        </a>
+        <div class="file-caption">
+          <span class="num">[01]</span>ROTTENLAND
+          <div class="tag">editorial &mdash; <a href="assets/pdf/rottenland.pdf" target="_blank" rel="noopener">open PDF &#9658;</a></div>
+        </div>
+      </div>
+
+      <div class="file-win">
+        <div class="file-titlebar">contributor.dir</div>
+        <div class="frame portrait slideshow" data-dir="assets/img/contributor" data-prefix="contributor"></div>
+        <div class="file-caption">
+          <span class="num">[02]</span>CONTRIBUTOR
+          <div class="tag">editorial</div>
+        </div>
+      </div>
+
+      <div class="file-win">
+        <div class="file-titlebar">vanguard.jpg</div>
+        <div class="frame portrait">
+          <img src="assets/img/vanguard/vanguard.jpg" alt="Vanguard Magazine"
+               onerror="this.replaceWith(noSignal())">
+        </div>
+        <div class="file-caption">
+          <span class="num">[03]</span>VANGUARD
+          <div class="tag">cover, New York</div>
+        </div>
+      </div>
+
+      <div class="file-win">
+        <div class="file-titlebar">sizefive.dir</div>
+        <div class="frame portrait slideshow" data-dir="assets/img/sizefive" data-prefix="sizefive"></div>
+        <div class="file-caption">
+          <span class="num">[04]</span>SIZEFIVE
+          <div class="tag">editorial</div>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="groove">
+
+    <p style="font-family: var(--pixel); font-size:14px; text-align:center;">
+      EMAIL: <a href="mailto:dpaganelli2@gmail.com">DPAGANELLI2@GMAIL.COM</a>
+    </p>
+  </div>
+
+  <div class="win-footer">
+    &copy; 2026 DAVIDE PAGANELLI &mdash; BASED IN ROME &mdash; FORZA ROMA<br>
+    best viewed in Netscape Navigator 4.0 @ 800x600 &mdash; no cookies, no trackers, no bull****
+  </div>
+
 </div>
 
-<!-- ===== WORKS ===== -->
-<section class="section" id="works">
-  <div class="list-head">
-    <span>NO</span><span>TITLE</span><span>TYPE</span>
-  </div>
-  <div class="works">
-
-    <div class="work">
-      <div class="frame">
-        <iframe src="https://www.youtube-nocookie.com/embed/Jr6r6PKVDSw"
-                title="MASKARA — Ycon Ydol"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="work-caption">
-        <span class="no">01</span>
-        <span class="title">MASKARA — YCON YDOL</span>
-        <span class="type">MUSIC VIDEO</span>
-      </div>
-    </div>
-
-    <div class="work">
-      <div class="frame">
-        <iframe src="https://player.vimeo.com/video/1206100947"
-                title="NATA [Trailer]"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="work-caption">
-        <span class="no">02</span>
-        <span class="title">NATA [TRAILER]</span>
-        <span class="type">SHORT FILM</span>
-      </div>
-    </div>
-
-    <div class="work">
-      <div class="frame">
-        <iframe src="https://www.youtube-nocookie.com/embed/Oc6n8Mp8Mww"
-                title="Verrà la Morte"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="work-caption">
-        <span class="no">03</span>
-        <span class="title">VERRÀ LA MORTE</span>
-        <span class="type">VIDEO ART</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ===== MAGAZINE ===== -->
-<section class="section" id="magazine">
-  <div class="list-head">
-    <span>NO</span><span>TITLE</span><span>TYPE</span>
-  </div>
-  <div class="magazine">
-
-    <!-- ROTTENLAND : pdf link -->
-    <div class="mag-item">
-      <a class="mag-frame" href="assets/pdf/rottenland.pdf" target="_blank" rel="noopener">
-        <img src="assets/img/rottenland/cover.jpg" alt="RottenLand cover"
-             onerror="this.replaceWith(noSignal())">
-      </a>
-      <div class="mag-caption">
-        <span class="no">01</span>
-        <span class="title">ROTTENLAND</span>
-        <span class="type">EDITORIAL</span>
-      </div>
-      <a href="assets/pdf/rottenland.pdf" target="_blank" rel="noopener"><span class="pdf-tag">OPEN PDF ►</span></a>
-    </div>
-
-    <!-- CONTRIBUTOR : slideshow -->
-    <div class="mag-item">
-      <div class="mag-frame slideshow" data-dir="assets/img/contributor" data-prefix="contributor"></div>
-      <div class="mag-caption">
-        <span class="no">02</span>
-        <span class="title">CONTRIBUTOR</span>
-        <span class="type">EDITORIAL</span>
-      </div>
-    </div>
-
-    <!-- VANGUARD : single photo -->
-    <div class="mag-item">
-      <div class="mag-frame">
-        <img src="assets/img/vanguard/vanguard.jpg" alt="Vanguard Magazine"
-             onerror="this.replaceWith(noSignal())">
-      </div>
-      <div class="mag-caption">
-        <span class="no">03</span>
-        <span class="title">VANGUARD</span>
-        <span class="type">COVER</span>
-      </div>
-    </div>
-
-    <!-- SIZEFIVE : slideshow -->
-    <div class="mag-item">
-      <div class="mag-frame slideshow" data-dir="assets/img/sizefive" data-prefix="sizefive"></div>
-      <div class="mag-caption">
-        <span class="no">04</span>
-        <span class="title">SIZEFIVE</span>
-        <span class="type">EDITORIAL</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="hud-bottom">
-  <span>©2026 DAVIDE PAGANELLI.</span>
-  <span>BASED IN ROME — FORZA ROMA</span>
-</footer>
+<div class="outer-tag">made in a bedroom &middot; 56k modem approved</div>
 
 <script src="js/main.js"></script>
 </body>
