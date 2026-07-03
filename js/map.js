@@ -52,11 +52,17 @@
   window.addEventListener("resize", resize);
   resize();
 
-  function elbow(fromX, fromY, toX, toY) {
+  // straight constellation line between the facing edges of two elements
+  function link(fromEl, toEl) {
+    var a = fromEl.getBoundingClientRect();
+    var b = toEl.getBoundingClientRect();
+    var aCx = a.left + a.width / 2;
+    var bCx = b.left + b.width / 2;
+    var fromX = bCx < aCx ? a.left - 6 : a.right + 6;
+    var toX = bCx < aCx ? b.right + 6 : b.left - 6;
     ctx.beginPath();
-    ctx.moveTo(fromX, fromY);
-    ctx.lineTo(fromX, toY);
-    ctx.lineTo(toX, toY);
+    ctx.moveTo(fromX, a.top + a.height / 2);
+    ctx.lineTo(toX, b.top + b.height / 2);
     ctx.stroke();
   }
 
@@ -77,24 +83,15 @@
     ctx.strokeStyle = RED;
     ctx.lineWidth = 1;
 
-    var nx = name.offsetLeft;
-    var ny = name.offsetTop + name.offsetHeight + 4;
-
     sections.forEach(function (sec) {
-      if (!visible(sec)) return;
-      var midY = sec.offsetTop + sec.offsetHeight / 2;
-      elbow(nx, ny, sec.offsetLeft - 16, midY);
+      if (visible(sec)) link(name, sec);
     });
 
     Object.keys(branches).forEach(function (key) {
       var sec = $(key);
       if (!visible(sec)) return;
-      var sx = sec.offsetLeft;
-      var sy = sec.offsetTop + sec.offsetHeight + 2;
       branches[key].forEach(function (sub) {
-        if (!visible(sub)) return;
-        var midY = sub.offsetTop + sub.offsetHeight / 2;
-        elbow(sx, sy, sub.offsetLeft - 16, midY);
+        if (visible(sub)) link(sec, sub);
       });
     });
   }

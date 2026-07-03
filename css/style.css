@@ -55,38 +55,44 @@ a:hover,
 .hidden { display: none; }
 
 #name {
-  top: 5vw;
-  left: 5vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-decoration: underline;
 }
 
 #name:hover { background: var(--red); color: #000; }
 
-#about    { top: 25vh; left: 25vw; }
-#video    { top: 35vh; left: 25vw; text-decoration: underline; }
-#magazine { top: 45vh; left: 25vw; text-decoration: underline; }
-#contacts { top: 55vh; left: 25vw; text-decoration: underline; }
+#about    { top: 24vh; left: 20vw; }
+#video    { top: 22vh; left: 66vw; text-decoration: underline; }
+#magazine { top: 72vh; left: 17vw; text-decoration: underline; }
+#contacts { top: 74vh; left: 68vw; text-decoration: underline; }
 
-#v1 { top: 30vh; left: 50vw; }
-#v2 { top: 36vh; left: 50vw; }
-#v3 { top: 42vh; left: 50vw; }
+#v1 { top: 7vh;  left: 74vw; }
+#v2 { top: 12vh; left: 79vw; }
+#v3 { top: 17vh; left: 84vw; }
 
-#g1 { top: 46vh; left: 50vw; }
-#g2 { top: 52vh; left: 50vw; }
-#g3 { top: 58vh; left: 50vw; }
-#g4 { top: 64vh; left: 50vw; }
+#g1 { top: 80vh; left: 5vw; }
+#g2 { top: 85vh; left: 9vw; }
+#g3 { top: 90vh; left: 13vw; }
+#g4 { top: 95vh; left: 17vw; }
 
-#c1 { top: 74vh; left: 50vw; }
-#c2 { top: 80vh; left: 50vw; }
+#c1 { top: 84vh; left: 76vw; }
+#c2 { top: 90vh; left: 81vw; }
 
 #credit {
   position: absolute;
   z-index: 1;
   bottom: 2vh;
-  left: 5vw;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 70%;
   opacity: 0.6;
+  text-align: center;
+  white-space: nowrap;
 }
+
+#credit a { text-decoration: underline; }
 
 /* ---------- subpages ---------- */
 body.page { min-height: 100vh; }
@@ -211,12 +217,24 @@ body.page { min-height: 100vh; }
 @media (max-width: 1000px) {
   body { font-size: 70%; }
 
-  #about    { left: 30vw; }
-  #video    { left: 30vw; }
-  #magazine { left: 30vw; }
-  #contacts { left: 30vw; }
+  #about    { top: 22vh; left: 12vw; }
+  #video    { top: 26vh; left: 58vw; }
+  #magazine { top: 70vh; left: 10vw; }
+  #contacts { top: 74vh; left: 56vw; }
 
-  #v1, #v2, #v3, #g1, #g2, #g3, #g4, #c1, #c2 { left: 58vw; }
+  #v1 { top: 8vh;  left: 48vw; }
+  #v2 { top: 13vh; left: 56vw; }
+  #v3 { top: 18vh; left: 64vw; }
+
+  #g1 { top: 78vh; left: 4vw; }
+  #g2 { top: 83vh; left: 8vw; }
+  #g3 { top: 88vh; left: 12vw; }
+  #g4 { top: 93vh; left: 16vw; }
+
+  #c1 { top: 84vh; left: 60vw; }
+  #c2 { top: 89vh; left: 66vw; }
+
+  #credit { bottom: 1vh; }
 
   .page-wrap { width: 90vw; margin-top: 18vh; }
 
