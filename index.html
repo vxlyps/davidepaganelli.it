@@ -5,104 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>davide paganelli</title>
 <meta name="description" content="Davide Paganelli, Italian film director based in Rome. Analog photography, experimental video and independent cinema.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Anton&family=Caveat:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="map">
 
-<div class="hero">
-  <div class="scribble-name">davide paganelli</div><br>
-  <div class="tagline">i make weird little movies in rome</div>
-</div>
+<canvas id="bg"></canvas>
 
-<nav class="messy-nav">
-  <a href="index.html" class="current">home</a>
-  <a href="#works">video</a>
-  <a href="#magazine">photos</a>
-  <a href="about.html">about</a>
-  <a href="https://www.instagram.com/davidepaganelly" target="_blank" rel="noopener">insta</a>
-</nav>
+<div class="node" id="name">/ davide paganelli</div>
 
-<section id="works">
-  <h2 class="section-title">watch this ↴</h2>
-  <div class="gallery">
+<a class="node" id="about" href="about.html">/ about</a>
+<div class="node toggle" id="video">/ video</div>
+<div class="node toggle" id="magazine">/ magazine</div>
+<div class="node toggle" id="contacts">/ contacts</div>
 
-    <div class="polaroid">
-      <div class="frame">
-        <iframe src="https://www.youtube-nocookie.com/embed/Jr6r6PKVDSw"
-                title="MASKARA — Ycon Ydol"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="cap">maskara <small>music video, shot on 16mm</small></div>
-    </div>
+<a class="node hidden" id="v1" href="video.html#maskara">/ maskara</a>
+<a class="node hidden" id="v2" href="video.html#nata">/ nata</a>
+<a class="node hidden" id="v3" href="video.html#verra-la-morte">/ verr&agrave; la morte</a>
 
-    <div class="polaroid">
-      <div class="frame">
-        <iframe src="https://player.vimeo.com/video/1206100947"
-                title="NATA [Trailer]"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="cap">nata (trailer) <small>body horror short film</small></div>
-    </div>
+<a class="node hidden" id="g1" href="magazine.html#rottenland">/ rottenland</a>
+<a class="node hidden" id="g2" href="magazine.html#contributor">/ contributor</a>
+<a class="node hidden" id="g3" href="magazine.html#vanguard">/ vanguard</a>
+<a class="node hidden" id="g4" href="magazine.html#sizefive">/ sizefive</a>
 
-    <div class="polaroid">
-      <div class="frame">
-        <iframe src="https://www.youtube-nocookie.com/embed/Oc6n8Mp8Mww"
-                title="Verrà la Morte"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="cap">verrà la morte <small>video art, shot on Super 8</small></div>
-    </div>
+<a class="node hidden" id="c1" href="mailto:dpaganelli2@gmail.com">/ write me</a>
+<a class="node hidden" id="c2" href="https://www.instagram.com/davidepaganelly" target="_blank" rel="noopener">/ follow me</a>
 
-  </div>
-</section>
+<div id="credit">/ &copy;2026 davide paganelli &mdash; rome</div>
 
-<section id="magazine">
-  <h2 class="section-title">and these ✂</h2>
-  <div class="gallery">
-
-    <div class="polaroid">
-      <a href="assets/pdf/rottenland.pdf" target="_blank" rel="noopener" style="display:block;">
-        <div class="frame portrait">
-          <img src="assets/img/rottenland/cover.jpg" alt="RottenLand cover"
-               onerror="this.replaceWith(noSignal())">
-        </div>
-      </a>
-      <div class="cap">rottenland <small>editorial</small></div>
-      <a class="pdf-link" href="assets/pdf/rottenland.pdf" target="_blank" rel="noopener">open the pdf →</a>
-    </div>
-
-    <div class="polaroid">
-      <div class="frame portrait slideshow" data-dir="assets/img/contributor" data-prefix="contributor"></div>
-      <div class="cap">contributor <small>editorial</small></div>
-    </div>
-
-    <div class="polaroid">
-      <div class="frame portrait">
-        <img src="assets/img/vanguard/vanguard.jpg" alt="Vanguard Magazine"
-             onerror="this.replaceWith(noSignal())">
-      </div>
-      <div class="cap">vanguard <small>cover, new york</small></div>
-    </div>
-
-    <div class="polaroid">
-      <div class="frame portrait slideshow" data-dir="assets/img/sizefive" data-prefix="sizefive"></div>
-      <div class="cap">sizefive <small>editorial</small></div>
-    </div>
-
-  </div>
-</section>
-
-<div class="foot">
-  <span class="star">★</span> ©2026 davide paganelli — based in rome, forza roma <span class="star">★</span><br>
-  <a href="mailto:dpaganelli2@gmail.com">dpaganelli2@gmail.com</a>
-</div>
-
-<script src="js/main.js"></script>
+<script src="js/map.js"></script>
 </body>
 </html>
