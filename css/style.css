@@ -65,6 +65,7 @@ a:hover,
 
 #about    { top: 24vh; left: 20vw; }
 #video    { top: 22vh; left: 66vw; text-decoration: underline; }
+#photo    { top: 48vh; left: 80vw; }
 #magazine { top: 72vh; left: 17vw; text-decoration: underline; }
 #contacts { top: 74vh; left: 68vw; text-decoration: underline; }
 
@@ -134,6 +135,32 @@ body.page { min-height: 100vh; }
 .piece .cap { margin-top: 1.2vh; }
 .piece .cap:hover { background: var(--red); color: #000; }
 
+/* single work page */
+.single .title { margin-bottom: 3vh; }
+
+.single .frame.portrait {
+  aspect-ratio: 4 / 5;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.single .desc {
+  margin-top: 3.5vh;
+  max-width: 75ch;
+  text-align: justify;
+}
+
+.single .desc p { margin: 0 0 2vh; line-height: 1.7; }
+
+.single .desc a { text-decoration: underline; }
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 4vw;
+  margin-top: 7vh;
+}
+
 /* magazine grid */
 .mag-grid {
   display: grid;
@@ -177,6 +204,22 @@ body.page { min-height: 100vh; }
 }
 .no-signal .bar { width: 40%; height: 1px; background: var(--red); opacity: 0.5; }
 
+/* photo gallery placeholder (shown until real photos are uploaded) */
+.placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--red);
+  font-size: 80%;
+  letter-spacing: 0.1em;
+  background:
+    repeating-linear-gradient(45deg,
+      transparent, transparent 16px,
+      rgba(255, 30, 30, 0.16) 16px, rgba(255, 30, 30, 0.16) 17px);
+}
+
 /* ---------- about ---------- */
 #profile {
   position: absolute;
@@ -219,6 +262,7 @@ body.page { min-height: 100vh; }
 
   #about    { top: 22vh; left: 12vw; }
   #video    { top: 26vh; left: 58vw; }
+  #photo    { top: 47vh; left: 72vw; }
   #magazine { top: 70vh; left: 10vw; }
   #contacts { top: 74vh; left: 56vw; }
 

@@ -1,7 +1,6 @@
 /* ============================================
    DAVIDE PAGANELLI — index map
-   canvas connector lines + static noise,
-   click to reveal branches
+   canvas connector lines, click to reveal branches
    ============================================ */
 
 (function () {
@@ -13,7 +12,7 @@
   var $ = function (id) { return document.getElementById(id); };
 
   var name = $("name");
-  var sections = [$("about"), $("video"), $("magazine"), $("contacts")];
+  var sections = [$("about"), $("video"), $("magazine"), $("photo"), $("contacts")];
   var branches = {
     video: ["v1", "v2", "v3"].map($),
     magazine: ["g1", "g2", "g3", "g4"].map($),
@@ -38,19 +37,23 @@
     } else {
       sections.forEach(function (el) { el.classList.remove("hidden"); });
     }
+    draw();
   });
 
   // clicking a section unfolds its branch
   Object.keys(branches).forEach(function (key) {
-    $(key).addEventListener("click", function () { toggleAll(branches[key]); });
+    $(key).addEventListener("click", function () {
+      toggleAll(branches[key]);
+      draw();
+    });
   });
 
   function resize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    draw();
   }
   window.addEventListener("resize", resize);
-  resize();
 
   // straight constellation line between the facing edges of two elements
   function link(fromEl, toEl) {
@@ -69,17 +72,6 @@
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // static noise
-    for (var i = 0; i < 260; i++) {
-      var x = Math.random() * canvas.width;
-      var y = Math.random() * canvas.height;
-      ctx.fillStyle = Math.random() < 0.07
-        ? "rgba(255,30,30,0.55)"
-        : "rgba(255,255,255,0.08)";
-      ctx.fillRect(x, y, 1.5, 1.5);
-    }
-
-    // connector lines
     ctx.strokeStyle = RED;
     ctx.lineWidth = 1;
 
@@ -96,5 +88,7 @@
     });
   }
 
-  setInterval(draw, 90);
+  resize();
+  // redraw once layout settles (fonts, zoom, mobile bars)
+  setTimeout(draw, 250);
 })();

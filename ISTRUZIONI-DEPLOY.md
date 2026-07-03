@@ -9,11 +9,12 @@
 | Vanguard foto singola | `assets/img/vanguard/vanguard.jpg` |
 | Contributor slideshow | `assets/img/contributor/contributor-01.jpg`, `contributor-02.jpg`, … fino a `-10` |
 | SizeFive slideshow | `assets/img/sizefive/sizefive-01.jpg`, `sizefive-02.jpg`, … fino a `-10` |
+| Photo (sezione /photo) | `assets/img/photo/photo-01.jpg`, `photo-02.jpg`, … fino a `-08` |
 
 Note:
 - Solo formato `.jpg`, numeri sempre a due cifre (`-01`, `-02`…).
 - Gli slideshow rilevano da soli quante foto ci sono (max 10), nessuna modifica al codice.
-- Finché mancano le immagini appare il placeholder "NO SIGNAL" — è voluto.
+- Finché mancano le immagini appare il placeholder "NO SIGNAL" (o "COMING SOON" nella sezione photo) — è voluto.
 - Consiglio: foto verticali o quadrate (i riquadri sono 4:5), max ~500KB l'una.
 
 ## 2. Pubblicare su GitHub (senza terminale)
