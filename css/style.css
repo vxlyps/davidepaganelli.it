@@ -274,26 +274,6 @@ a.frame { display: block; }
 
   #credit { white-space: normal; width: 92vw; }
 
-  #about    { top: 20vh; left: 12vw; }
-  #video    { top: 27vh; left: 58vw; }
-  #photo    { top: 41vh; left: 72vw; }
-  #magazine { top: 70vh; left: 10vw; }
-  #contacts { top: 76vh; left: 56vw; }
-
-  #v1 { top: 8vh;  left: 48vw; }
-  #v2 { top: 13vh; left: 56vw; }
-  #v3 { top: 18vh; left: 64vw; }
-
-  #g1 { top: 78vh; left: 4vw; }
-  #g2 { top: 83vh; left: 8vw; }
-  #g3 { top: 88vh; left: 12vw; }
-  #g4 { top: 93vh; left: 16vw; }
-
-  #c1 { top: 84vh; left: 60vw; }
-  #c2 { top: 89vh; left: 66vw; }
-
-  #credit { bottom: 1vh; }
-
   .page-wrap { width: 90vw; margin-top: 18vh; }
 
   .mag-grid { grid-template-columns: 1fr; }
@@ -306,8 +286,43 @@ a.frame { display: block; }
   }
 }
 
+/* phones: rebuild the map on a two-column vertical rhythm so that
+   expanded branches never overlap. right column = video + contacts,
+   left column = about + magazine, with generous vertical gaps. */
+@media (max-width: 640px) {
+  body.map { font-size: 64%; }
+
+  /* video group — top, right column */
+  #v1 { top: 4vh;  left: 52vw; }
+  #v2 { top: 10vh; left: 57vw; }
+  #v3 { top: 16vh; left: 60vw; }
+  #video { top: 24vh; left: 66vw; }
+
+  /* about — upper left */
+  #about { top: 31vh; left: 8vw; }
+
+  /* photo — mid right, no branches */
+  #photo { top: 44vh; left: 72vw; }
+
+  /* name stays centred at 50vh */
+
+  /* magazine group — lower, left column */
+  #magazine { top: 59vh; left: 8vw; }
+  #g1 { top: 66vh; left: 5vw; }
+  #g2 { top: 72vh; left: 9vw; }
+  #g3 { top: 78vh; left: 13vw; }
+  #g4 { top: 84vh; left: 17vw; }
+
+  /* contacts group — lower, right column */
+  #contacts { top: 59vh; left: 62vw; }
+  #c1 { top: 68vh; left: 64vw; }
+  #c2 { top: 74vh; left: 68vw; }
+
+  #credit { bottom: 1.5vh; }
+}
+
 /* short screens (landscape phones): shrink so nothing collides */
 @media (max-height: 560px) {
-  body.map { font-size: 62%; }
+  body.map { font-size: 60%; }
   #credit { display: none; }
 }
